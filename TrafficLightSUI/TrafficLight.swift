@@ -17,16 +17,17 @@ struct TrafficLight: View {
             Color(.black)
                 .ignoresSafeArea()
             VStack {
-                SectionView(color: .red)
-                    .opacity(redLightOpacity)
-                SectionView(color: .yellow)
-                    .opacity(yellowLightOpacity)
-                SectionView(color: .green)
-                    .opacity(greenLightOpacity)
+                SectionView(color: .red, opacity: redLightOpacity)
+                    .padding(.top, 16)
+                SectionView(color: .yellow, opacity: yellowLightOpacity)
+                    .padding(.top, 16)
+                SectionView(color: .green, opacity: greenLightOpacity)
+                    .padding(.top, 16)
                 
                 Spacer()
                 
                 ButtonView(trafficLight: self)
+                    .padding()
             }
         }
     }

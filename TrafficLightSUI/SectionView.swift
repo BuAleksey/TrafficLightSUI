@@ -9,18 +9,19 @@ import SwiftUI
 
 struct SectionView: View {
     let color: Color
+    let opacity: Double
     
     var body: some View {
-            Circle()
-                .frame(width: 130, height: 130)
-                .foregroundColor(color)
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .padding(.top, 16)
+        Circle()
+            .frame(width: 130, height: 130)
+            .foregroundColor(color)
+            .overlay(Circle().stroke(Color.white, lineWidth: 4))
+            .opacity(opacity)
     }
 }
 
 struct SectionView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionView(color: .green)
+        SectionView(color: .green, opacity: 0.5)
     }
 }

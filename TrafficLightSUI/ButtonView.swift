@@ -19,11 +19,10 @@ struct ButtonView: View {
                 Capsule()
                     .frame(width: 150, height: 60)
                     .overlay(Capsule().stroke(Color(.white), lineWidth: 4))
-                Text("\(buttonName)")
+                Text(buttonName)
                     .font(.largeTitle)
                     .foregroundColor(.white)
             }
-            .padding()
         }
     }
     
